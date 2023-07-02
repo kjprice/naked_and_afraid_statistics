@@ -11,4 +11,4 @@ cd ..
 
 CONDA_ENV_DIR=conda_env
 
-conda create -y --prefix env jupyterlab matplotlib numpy pandas requests
+conda create -y --prefix env jupyterlab matplotlib numpy pandas requests openpyxl
