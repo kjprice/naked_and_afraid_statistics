@@ -1,6 +1,6 @@
 import pandas as pd
 
-from python.config import CSV_LOCAL_FILEPATH, ORIGINAL_LOCAL_FILEPATH
+from python.config import CSV_COMPILED_LOCAL_FILEPATH, ORIGINAL_LOCAL_FILEPATH
 
 def load_original_data():
     return pd.read_excel(ORIGINAL_LOCAL_FILEPATH, skiprows=5)
@@ -20,7 +20,7 @@ def clean_data(df_raw: pd.DataFrame) -> pd.DataFrame:
     return df.rename(columns=column_map)
 
 def save_data(df: pd.DataFrame):
-  df.to_csv(CSV_LOCAL_FILEPATH, index=False)    
+  df.to_csv(CSV_COMPILED_LOCAL_FILEPATH, index=False)    
 
 def compile_to_csv():
     print('Loading Excel Data')
